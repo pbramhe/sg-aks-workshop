@@ -42,7 +42,7 @@ resource "azurerm_log_analytics_solution" "demo" {
     product   = "OMSGallery/Containers"
   }
 }
-resource "azurerm_kubernetes_cluster" "demo" {
+resource "azurerm_kubernetes_cluster" {
   name                = "${var.prefix}-aks"
   location            = var.location
   dns_prefix          = "${var.prefix}-aks"
